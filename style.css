@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E272E;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+label, h3 {
+    font-size: 25px;
+}
+
+input, select, button {
+    border: 1px solid #384047;
+    background-color: #222B32;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section .container {
+    width: 600px;
+    height: auto;
+    background-color: #222B32;
+    border-radius: 20px;
+    padding: 30px 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #e0e5e8;
+    
+}
+
+.aspiracion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: -20px 0;
+}
+
+.btn-mujer {
+    background-color: pink;
+    color: #1E272E;
+}
+
+.btn-hombre {
+    background-color: aqua;
+    color: #1E272E;
+}
+
+.btn-default {
+    background-color: #389559;
+    color: #1E272E;
+}
+
+.genero {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+#customCargo {
+    display: none;
+}
+
+.mujer, .hombre{
+    font-size: 16px;
+}

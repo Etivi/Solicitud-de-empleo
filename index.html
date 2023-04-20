@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Solicitud de Empleo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- ┼┼┼ Solictiud de empleo ┼┼┼
+    
+Se le solicita al aspirante la construccion de un formulario con las siguientes caracteristicas
+
+1. Nombre y apellidos
+2. Aspiracion salarial
+3. Correo electronico
+4. Genero
+5. Cargo a ocupar(entre los cargos disponibles van a tener: desarrollador, gerente de proyecto, lider administrativo, conductor, 
+y otro en caso dado que se selecciona la opcion otro este debe de habilitar un nuveo campo que le permita al usuario escribir el cargo)
+al dar click en boton guardar este debe de almacenar en un objeto tipo Json dentro de un lista [{}, {}] y deberá vaciar el formulario 
+para un nuevo registro
+
+Restricciones: Todo los campos deben de ser obligatorios, si el género es masculino el botón para subir la información debe de ser de color
+azul si es femenino debe ser de color rosa.
+-->
+
+		<section>
+			<div class="container">
+				<h1>Solicitud de empleo</h1>
+				<form>
+					<label for="nombreApellido">Nombre y Apellido: </label>
+					<input
+						type="text"
+						id="nombreApellido"
+						placeholder="Jhon Smith"
+						required
+					/>
+					<label for="aspiracionSalarial">Aspiración salarial</label>
+					<div class="aspiracion">
+						<span>$1.000.000</span>
+						<input type="range" id="aspiracionSalarial"  />
+						<span>$5.000.000</span>
+					</div>
+					<label for="email">Correo electronico</label>
+					<input type="email" id="email" placeholder="su@correo.com" required/>
+					<div>
+						<h3>Genero</h3>
+						<div class="genero">
+							<div>
+								<input
+									onclick="cambiarColor()"
+									type="radio"
+									id="hombre"
+									name="genero"
+									required
+								/>
+								<label class="hombre" for="hombre">Hombre</label>
+							</div>
+							<div>
+								<input
+									onclick="cambiarColor()"
+									type="radio"
+									id="mujer"
+									name="genero"
+									required
+								/>
+								<label class="mujer" for="mujer">Mujer</label>
+							</div>
+						</div>
+					</div>
+					<label for="cargo">Cargo a ocupar</label>
+					<select id="cargo" onchange="mostrarInput()">
+						<option value="Desarrollador">Desarrollador</option>
+						<option value="Gerente de proyecto">Gerente de proyecto</option>
+						<option value="Lider administrativo">Lider administrativo</option>
+						<option value="Conductor">Conductor</option>
+						<option id="otro" value="4">Otro</option>
+					</select>
+					<input
+						id="customCargo"
+						type="text"
+						placeholder="Que cargo buscas"
+						required
+					/>
+					<input type="button" id="enviar" onclick="registro(event)" class="btn-default" value="Enviar"/>
+				</form>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
